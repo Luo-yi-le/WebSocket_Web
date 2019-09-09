@@ -7,16 +7,18 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<link rel="icon" href="favicon.ico">
 		<title>后台管理系统</title>
-		<link rel="stylesheet" href="../../lib/iview-3.1.0/styles/iview.css">
-		<link rel="stylesheet" href="../../style/css/index.css">
-		<link rel="import" href="../include/tpl_js_lib.html">
+		<script src="http://192.168.60.107:8080/js/source/fontSizeloading.js"></script>
+		<link rel="stylesheet" href="../lib/iview-3.1.0/styles/iview.css">
+		<link rel="stylesheet" href="http://192.168.60.107:8080/css/style.css">
+		
+
 	</head>
 
 	<body>
-		<div id="app">
+		<div id="app" class="index_page">
 			<div class="layout">
 				<Layout>
-					<Sider ref="side1" hide-trigger collapsible :collapsed-width="80" v-model="isCollapsed">
+					<Sider class="sider-left" ref="side1" hide-trigger collapsible :collapsed-width="80" v-model="isCollapsed">
 						<div class="sider-logo">
 							<span class="sider-logo-text">后台管理系统</span>
 							<Icon class="sider-logo-icon" type="md-home" size="24"></Icon>
@@ -44,32 +46,41 @@
 							<i-menu mode="horizontal" theme="dark" active-name="1">
 								<div class="layout-logo">
 									<Icon @click.native="collapsedSider" class="menu-toggle" :class="rotateIcon" :style="{margin: '0'}" type="md-menu"
-									 size="24"></Icon>
+									 size="1.2rem"></Icon>
 								</div>
-								<div class="layout-nav" :style="{width: (isCollapsed ? 390 : 500) + 'px'}">
+								<div class="layout-time">
+									<div class="layout-time-logo"></div>
+									<div class="layout-time-txt" data-time="data-time">2019-7-7 18:20</div>
+								</div>
+								<div class="layout-nav" :style="{width: (isCollapsed ? 16.5 : 18.5) + 'rem'}">
 									<menu-item name="1" title="内容管理">
 										内容管理
 									</menu-item>
 									<menu-item name="2">
 										用户管理
 									</menu-item>
-									<menu-item name="4">
+									<menu-item name="3">
 										综合设置
 									</menu-item>
-									<Submenu name="3">
+									<Submenu name="4">
 										<template slot="title">
-											我的
+											<div class="layout-nav-user" data-user="user-image" title="用户头像"></div>
 										</template>
 										<menu-group title="使用">
-											<menu-item name="3-1">新增和启动</menu-item>
-											<menu-item name="3-2">活跃分析</menu-item>
-											<menu-item name="3-3">时段分析</menu-item>
+											<menu-item name="4-1">新增和启动</menu-item>
+											<menu-item name="4-2">活跃分析</menu-item>
+											<menu-item name="4-3">时段分析</menu-item>
 										</menu-group>
 										<menu-group title="留存">
-											<menu-item name="3-4">用户留存</menu-item>
-											<menu-item name="3-5">流失用户</menu-item>
+											<menu-item name="4-4">用户留存</menu-item>
+											<menu-item name="4-5">流失用户</menu-item>
 										</menu-group>
 									</Submenu>
+									<div class="layout-nav-signout">
+										<div class="layout-nav-signout-close" data-close="signout" title="登出"></div>
+										<!-- <div class="layout-nav-signout-txt">登出</div> -->
+
+									</div>
 								</div>
 							</i-menu>
 						</i-header>
@@ -107,5 +118,6 @@
 		</div>
 
 	</body>
-
+	<link rel="import" href="../include/tpl_js_lib.html">
+	<script src="http://192.168.60.107:8080/js/source/index.js"></script>
 </html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta name="viewport" content="width=device-width" />
+		<meta charset="UTF-8">
+		<title>用户登录</title>
+		<script src="../js/jquery/jquery.min.js"></script>
+		<script src="http://192.168.60.107:8080/js/source/fontSizeloading.js"></script>
+		<script src="http://192.168.60.107:8080/js/lib/vue.js"></script>
+		<script src="../lib/iview-3.1.0/iview.min.js"></script>
+		<link rel="stylesheet" href="../lib/iview-3.1.0/styles/iview.css">
+		<script src="../js/reconnecting-websocket/reconnecting-websocket.min.js"></script>
+		<script src="http://192.168.60.107:8080/js/lib/keyboard/keyboard_shortcuts.js"></script>
+		<link rel="stylesheet" href="http://192.168.60.107:8080/css/style.css">
+		<script src="http://192.168.60.107:8080/modules/global.js"></script>
+	</head>
+
+
+	<body>
+		<div class="login_page">
+			<div id="app" class="account-container">
+				<div class="account-modal-container">
+					<div class="modal"></div>
+					<div class="load-bar-container">
+						<div class="load-bar" v-show="loadingbar.show">
+							<div class="bar"></div>
+							<div class="bar"></div>
+							<div class="bar"></div>
+						</div>
+					</div>
+					<div class="account-signin-container">
+						<h1>用户登录</h1>
+						<form class="account-form">
+							<div class="form-group">
+								<label>
+									<span>登录名:</span>
+									<input type="text" placeholder="请输入登录名" v-model="loginViewModel.userName" />
+								</label>
+							</div>
+							<div class="form-group">
+								<label>
+									密码:
+									<input type="password" placeholder="请输入密码" v-model="loginViewModel.password" />
+								</label>
+							</div>
+							<div class="form-group">
+								<a id="btn_login" @click="handleLogin">登 录</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="http://192.168.60.107:8080/js/source/login.js"></script>

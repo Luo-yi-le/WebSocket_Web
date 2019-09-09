@@ -6,39 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>后台管理系统--首页</title>
-    <script src="../../../js/vue/vue.js"></script>
-    <script src="../../../lib/iview-3.1.0/iview.js"></script>
-    <link rel="stylesheet" href="../../../lib/iview-3.1.0/styles/iview.css">
-    <style type="text/css">
-        h2 {
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 8px;
-            margin-bottom: 8px;
-            margin-top: 15px;
-        }
+	<script src="http://192.168.60.107:8080/js/source/fontSizeloading.js"></script>
+    <script src="http://192.168.60.107:8080/js/lib/vue.js"></script>
+    <script src="../../lib/iview-3.1.0/iview.js"></script>
+    <link rel="stylesheet" href="../../lib/iview-3.1.0/styles/iview.css">
+		<link rel="stylesheet" href="http://192.168.60.107:8080/css/style.css">
 
-        h3 {
-            padding: 12px 0 8px;
-            margin: 8px 0 5px;
-        }
-
-        p {
-            margin: 12px 0 8px;
-            line-height: 20px;
-        }
-    </style>
 </head>
 
 <body style="margin:15px;">
-    <div id="app">
+    <div id="app" class="default_page">
         <i-row>
             <i-col span="12">
                 <Card>
-                    <p slot="title">DncVueSample-后台管理系统</p>
+                    <p slot="title">后台管理系统</p>
                     <h2>系统简介</h2>
                     <h3>版本信息</h3>
                     <p>
-                        DncVueSample当前依赖的组件的版本信息如下：
+                        当前依赖的组件的版本信息如下：
                     </p>
                     <p>
                         <b style="margin-right:10px;">Vue.js:</b>2.5.17
@@ -70,34 +55,12 @@
                         <br />
                         选项卡切换时，支持切换动画效果，视觉体验非常不错。
                     </p>
-                    <h3>结束语</h3>
-                    <p>
-                        DncVueSample是一个极简的基于Vue.js + iview
-                        实现的静态后台管理系统模板，她仅是一个后台管理系统模板的雏形UI，不涉及系统功能，但所谓“麻雀虽小五脏俱全”，选择DncVueSample作为后台管理系统的初始模板，可以帮助使用者快速地开始项目的开端UI框架的搭建。
-                    </p>
-                    <p>
-                        <b style="color:#f00;">注：DncVueSample目前没有适配移动端设备和IE10以下古老的浏览器，所以请在PC设备中使用现代浏览器预览和使用。</b>
-                    </p>
-                    <h3>代码开源</h3>
-                    <p>
-                        没错，DncVueSample是开源的，你可以使用DncVueSample模板框架做任何的集成或者开发。
-                        <br />
-                    </p>
-                    <p>
-                        <b style="margin-right:15px;">源代码托管地址: </b>https://github.com/codedefault/DncVueSample
-                    </p>
                 </Card>
             </i-col>
             <i-col span="11" style="margin-left: 20px;">
                 <Card>
-                    <p slot="title">关于DncVueSample</p>
-                    <p>
-                        <b>VncVueSample</b>由<b>码友网</b>(<a href="https://codedefault.com" target="_blank">https://codedefault.com</a>)发布并提供更新支持。
-                    </p>
-                    <p>作者:Rector</p>
-                    <p style="margin-top:15px;">
-                        <b>DncVueSample</b>：是一个基于Vue.js + iview 前端框架搭建的后台管理系统模板，适用于如：OA,CRM,CMS等管理系统的后台开发。
-                    </p>
+                    <p slot="title">关于</p>
+                    
                 </Card>
             </i-col>
         </i-row>
