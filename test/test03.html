@@ -5,17 +5,9 @@
 		<title></title>
 	</head>
 	<body>
-		<script src="socket.io.js"></script>
-		<script>
-			var socket = io.connect('http://192.168.60.107:9999');
+		<script src="23.js"></script>
 
-			socket.on('news', function(data) {
-				alert(data.hello);
-				socket.emit('my other event', {
-					my: 'data'
-				});
-			});
-		</script>
+    <div id="music"> </div>
 
 	</body>
 </html>

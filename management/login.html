@@ -5,21 +5,12 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta charset="UTF-8">
 		<title>用户登录</title>
-		<script src="../js/jquery/jquery.min.js"></script>
-		<script src="http://192.168.60.107:8080/js/source/fontSizeloading.js"></script>
-		<script src="http://192.168.60.107:8080/js/lib/vue.js"></script>
-		<script src="../lib/iview-3.1.0/iview.min.js"></script>
-		<link rel="stylesheet" href="../lib/iview-3.1.0/styles/iview.css">
-		<script src="../js/reconnecting-websocket/reconnecting-websocket.min.js"></script>
-		<script src="http://192.168.60.107:8080/js/lib/keyboard/keyboard_shortcuts.js"></script>
-		<link rel="stylesheet" href="http://192.168.60.107:8080/css/style.css">
-		<script src="http://192.168.60.107:8080/modules/global.js"></script>
+		<link rel="stylesheet" href="../lib/iview-4.0.1/styles/iview.css">
+		<link rel="stylesheet" href="../style/css/style.css">
 	</head>
-
-
 	<body>
 		<div class="login_page">
-			<div id="app" class="account-container">
+			<div id="login" class="account-container">
 				<div class="account-modal-container">
 					<div class="modal"></div>
 					<div class="load-bar-container">
@@ -34,8 +25,8 @@
 						<form class="account-form">
 							<div class="form-group">
 								<label>
-									<span>登录名:</span>
-									<input type="text" placeholder="请输入登录名" v-model="loginViewModel.userName" />
+									<span>登录账号:</span>
+									<input type="text" placeholder="请输入登录账号" v-model="loginViewModel.userName" />
 								</label>
 							</div>
 							<div class="form-group">
@@ -43,6 +34,29 @@
 									密码:
 									<input type="password" placeholder="请输入密码" v-model="loginViewModel.password" />
 								</label>
+							</div>
+							<div class="form-group" style="display: flex">
+								<Radio-group v-model="radioVal" @on-change="changeModel" style="display: flex">
+									<Radio border :label="radioAdmin"></Radio>
+									<Radio border :label="radioUser"></Radio>
+								</Radio-group>
+							</div>
+							<div class="form-group" style="display: flex">
+								<div class="for-reg">
+									<div data-forget="data-forget" @click="forget=true" class="forget"><label>忘记密码</label></div>
+									<Modal title="忘记密码" v-model="forget" :loading="loading" @on-ok="forgetPwd" class-name="vertical-center-modal">
+										<p>
+											<span>登录账号:</span>
+											<input type="text" placeholder="请输入登录账号" v-model="loginViewModel.userName" />
+										</p>
+										<p>
+											<span>个人邮箱:</span>
+											<input type="email" placeholder="个人邮箱"  v-model="loginViewModel.email"/>
+										</p>
+
+									</Modal>
+									<div data-register="data-register" class="register"><label>注册</label></div>
+								</div>
 							</div>
 							<div class="form-group">
 								<a id="btn_login" @click="handleLogin">登 录</a>
@@ -54,4 +68,11 @@
 		</div>
 	</body>
 </html>
-<script src="http://192.168.60.107:8080/js/source/login.js"></script>
+<script src="../js/jquery/jquery.min.js"></script>
+<script src="http://192.168.60.107:8080/js/source/fontLoading.js"></script>
+<script src="../js/vue/vue.js"></script>
+<script src="../lib/iview-4.0.1/iview.min.js"></script>
+<script src="../js/reconnecting-websocket/reconnecting-websocket.min.js"></script>
+<script src="http://192.168.60.107:8080/js/lib/keyboard/keyboard_shortcuts.js"></script>
+<script src="http://192.168.60.107:8080/modules/global.js"></script>
+<script type="module" src="http://192.168.60.107:8080/js/source/login.js"></script>

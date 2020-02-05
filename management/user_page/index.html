@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+<!-- 		<meta name="viewport" content="initial-scale=0.5,maximun-scale=0.5,user-scalable=no" />
+ -->		<title>232</title>
+
+		<link rel="stylesheet" href="../../lib/iview-4.0.1/styles/iview.css" />
+		<link rel="stylesheet" href="emerald.css" />
+		<!-- 
+		<link rel="stylesheet" media="all and (orientation:landscape)" href="http://192.168.60.107:8080/css/frontEnd/landscape.css">
+		<link rel="stylesheet" media="all and (orientation:portrait)" href="http://192.168.60.107:8080/css/frontEnd/portrait.css"> -->
+
+		<!-- 		<link rel="stylesheet" href="http://192.168.60.107:8080/css/frontEnd/frontEndStyle.css"/> -->
+	</head>
+	<body>
+		<div id="index" >
+			
+			<div class="wrapper">
+				<div class="grid">
+
+					<div class="grid__item">
+						<Row class="navigBar" type="flex">
+							<i-col style="background-color:#4CB7ED;" span="4">
+								<div class="logo">
+									<img class="logo-img" />
+								</div>
+							</i-col>
+							<i-col style="background-color:#19A3E8" span="10">导航栏区域</i-col>
+							<i-col style="background-color:#4CB7ED" span="10">用户详细区域</i-col>
+						</Row>
+						<Row type="flex" class="content">
+							<i-col span="24">中间内容</i-col>
+						</Row>
+						<Row type="flex" class="footHeader">
+							<i-col span="24">底部</i-col>
+						</Row>
+					</div>
+	
+					<div class="grid__item e-4--palm e-8 e-12--desk">…</div>
+
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="../../js/jquery/jquery.min.js"></script>
+<script src="../../js/vue/vue.js"></script>
+<script src="../../lib/iview-4.0.1/iview.min.js"></script>
+<script src="http://192.168.60.107:8080/js/source/fontLoading.js"></script>
+<script src="emerald.js"></script>
+<script>
+	var vm = new Vue({
+		el: "#index",
+		data() {
+			return {
+				value1: 'ewewe',
+				id: 123
+			}
+		}
+	})
+</script>
